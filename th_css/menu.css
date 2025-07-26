@@ -1,0 +1,99 @@
+/* Tổng thể */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+.header {
+  background-color: #2e8b57;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #eee;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* Menu sections */
+.menu {
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.category {
+  margin-bottom: 40px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.category h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Màu chữ theo danh mục */
+.appetizer h2 {
+  color: #ff6600;
+}
+
+.main-course h2 {
+  color: #3366cc;
+}
+
+.dessert h2 {
+  color: #cc33cc;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+/* Món đặc biệt */
+.special {
+  border-left: 4px solid gold;
+  background-image: linear-gradient(to right, #fff9e6, #fffdf5);
+}
+
+/* Responsive (nếu cần) */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-weight: bold;
+  }
+}
