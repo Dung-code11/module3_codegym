@@ -1,16 +1,21 @@
 /* Tổng thể */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   line-height: 1.6;
+  background-color: #f4fff8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header */
 .header {
-  background-color: #2e8b57;
+  background-image: url("./back-header.jpg");
   color: white;
   text-align: center;
   padding: 20px 10px;
+  border-bottom: 5px solid #1f6b44;
 }
 
 /* Footer */
@@ -20,66 +25,95 @@ body {
   text-align: center;
   padding: 15px;
   font-size: 14px;
+  margin-top: auto;
 }
 
 /* Menu sections */
+/* Menu sections nâng cấp */
 .menu {
-  padding: 20px;
-  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 30px;
+  background: linear-gradient(to bottom, #ffffff, #f4fff8);
+  flex: 1;
 }
 
+/* Card danh mục món ăn */
 .category {
-  margin-bottom: 40px;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 15px;
+  border: 1px solid #e2e2e2;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hiệu ứng khi hover */
+.category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Tên danh mục */
 .category h2 {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 8px;
+  position: relative;
+  padding-left: 30px;
 }
 
-/* Màu chữ theo danh mục */
-.appetizer h2 {
-  color: #ff6600;
+/* Thêm icon nhẹ phía trước tiêu đề */
+.category h2::before {
+  content: "🍽️";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 24px;
 }
 
-.main-course h2 {
-  color: #3366cc;
-}
-
-.dessert h2 {
-  color: #cc33cc;
-}
-
-/* Table styles */
+/* Table nâng cấp */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
 th, td {
-  padding: 12px;
+  padding: 14px 16px;
   border-bottom: 1px solid #ddd;
   text-align: left;
+  font-size: 16px;
 }
 
 th {
-  background-color: #f0f0f0;
+  background-color: #f7f7f7;
   font-weight: bold;
+  color: #333;
 }
 
-/* Món đặc biệt */
+/* Món đặc biệt nổi bật hơn */
 .special {
-  border-left: 4px solid gold;
-  background-image: linear-gradient(to right, #fff9e6, #fffdf5);
+  border-left: 6px solid gold;
+  background: linear-gradient(to right, #fff9e6, #fffef8);
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
-/* Responsive (nếu cần) */
+.special:hover {
+  background: linear-gradient(to right, #fff3c1, #fffbe0);
+}
+
+/* Responsive */
 @media (max-width: 600px) {
+  .menu {
+    padding: 20px 10px;
+  }
+
   table, thead, tbody, th, td, tr {
     display: block;
   }
@@ -95,5 +129,10 @@ th {
     top: 12px;
     left: 12px;
     font-weight: bold;
+    white-space: nowrap;
   }
+
+  td:nth-child(1)::before { content: "Món ăn: "; }
+  td:nth-child(2)::before { content: "Mô tả: "; }
+  td:nth-child(3)::before { content: "Giá: "; }
 }

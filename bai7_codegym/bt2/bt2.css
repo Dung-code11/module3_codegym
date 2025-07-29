@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  padding-top: 60px; /* Để trống cho header fixed */
+}
+
+/* Header cố định */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1877f2;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Bố cục 3 cột */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar trái */
+.sidebar-left {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  height: 100vh;
+  position: sticky;
+  top: 80px;
+}
+
+/* Sidebar phải */
+.sidebar-right {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  position: sticky;
+  top: 80px;
+}
+
+/* Nội dung chính */
+main {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.post {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Menu list */
+.sidebar-left ul,
+.sidebar-right ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.sidebar-left li,
+.sidebar-right li {
+  margin-bottom: 10px;
+}
